@@ -3,40 +3,20 @@ A public repo to share my journey on learning how to become a system administrat
 
 ## Table of contents
 
-- [Software](#software)
+- [Introduction](#Introduction)
+- [Environment Setup](#Environment_Setup)
+- [Topics Covered](#Topics_Covered)
 
 
 
 
 
 
-.
+## Introduction
 
+## Environment Setup
 
-
-.
-
-
-
-
-
-
-
-.
-
-
-
-
-
-
-
-
-.
-
-## Software
-
-
-
+## Topics Covered
 
 
 
