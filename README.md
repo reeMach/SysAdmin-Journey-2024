@@ -10,6 +10,19 @@ A public repo to share my journey on learning how to become a system administrat
 
 
 
+.
+
+
+
+.
+
+
+
+
+
+
+
+.
 
 
 
@@ -18,20 +31,7 @@ A public repo to share my journey on learning how to become a system administrat
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.
 
 ## Software
 
