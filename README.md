@@ -9,7 +9,7 @@
   - [Security](#security)
 
 ## Introduction
-Provide an overview of your repository, including your learning objectives and the purpose of the documentation.
+A public repo to share my journey on learning how to become a system administrator. I'm not taking any specific route nor am I following any specific guide. I'm loading up Windows Server 2022 on a spare computer and going at it.
 
 ## Environment Setup
 Detail the steps and configurations for setting up your environment.
