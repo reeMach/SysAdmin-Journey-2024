@@ -6,10 +6,10 @@ A public repo to share my journey on learning how to become a system administrat
 - [Introduction](#Introduction)
 - [Environment Setup](#Environment-Setup)
 - [Topics Covered](#Topics-Covered)
-
-
-
-
+  - [Active Directory](#active-directory)
+  - [Group Policy](#group-policy)
+  - [Networking](#networking)
+  - [Security](#security)
 
 
 ## Introduction
@@ -18,13 +18,8 @@ A public repo to share my journey on learning how to become a system administrat
 
 ## Topics Covered
 
-
-
-
-
-
-
-
-
-
+### Active Directory
+### Group Policy
+### Networking
+### Security
 
