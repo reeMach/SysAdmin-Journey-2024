@@ -23,6 +23,22 @@ A public repo to share my journey on learning how to become a system administrat
       6. We are going to select Windows Server 2022 Standard Evaluation (Desktop Experience) and install
       7. Once in, update everything! (I updated my bios as well)
   - Configuration Settings
+    - We're going to want to setup a static IP address for this machine otherwise we're going to be frustrated everytime we try to reach this server when DHCP provides a new IP.
+      1. Assign a static IP - Visit your router interface
+      2. Go to DHCP Server
+      3. Assign 10.xx.xx.7 and create an ARP table static entry for the MAC and IP address pair
+      4. Go to your server and open Server Manager
+      5. On the left table of contents, click Local Server, and update your computer name. Restart computer.
+      6. On the left table of contents, click Local Server, and click Ethernet. Right click ethernet, then properties.
+      7. Setup IPV4 to the IP address we assigned this server to on our router. - Static IP setup
+      8. Install Active Directory Domain Services - Open Server Manager
+      9. Click on "Manage" on the top right > click "Add Roles and Features"
+      10. Click next until you reach "Server Roles". Select "Active Directory Domain Services" and complete the install - AD DS setup
+      11. Promote server to a domain controller - Open Server Manager > click the notification flag on the top right > click "Promote this server to a domain controller"
+      12. Select "Add a new forest" and enter a domain name e.g. Burgers.local
+      13. Set Forest Functional Level and Domain Functional Level to highest level e.g. Windows Server 2019
+      14. Set up the Directory Services Restore Mode password
+      15. Verify all other options and install to proceed and restart
 - **Domain Controller Setup**
   - Installing Active Directory Domain Services (AD DS)
   - Configuring the Domain
