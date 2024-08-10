@@ -1,6 +1,5 @@
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Environment Setup](#environment-setup)
 - [Topics Covered](#topics-covered)
   - [Active Directory](#active-directory)
@@ -12,10 +11,17 @@
 A public repo to share my journey on learning how to become a system administrator. I'm not taking any specific route nor am I following any specific guide. I'm loading up Windows Server 2022 on a spare computer and going at it.
 
 ## Environment Setup
-Detail the steps and configurations for setting up your environment.
 
 - **Installation of Windows Server 2022**
   - Initial Setup
+    - Get Windows Server 2022 Evaluation Version from the following website: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022. This provides a 180 day trial period. After the trial period expires, the server will shutdown. We will be installing this on a spare micro desktop to save energy! A Dell OptiPlex 7070 was purchased for $150 on eBay.
+      1. Click Download ISO
+      2. Enter your information
+      3. Download 64-bit edition
+      4. Download Rufus from: https://rufus.ie/en/ and create your Windows Server 2022 USB - This will be used to format and create a bootable USB flash drive
+      5. Plug in your USB onto the spare desktop, select USB boot option, and load up the installer
+      6. We are going to select Windows Server 2022 Standard Evaluation (Desktop Experience) and install
+      7. Once in, update everything! (I updated my bios as well)
   - Configuration Settings
 - **Domain Controller Setup**
   - Installing Active Directory Domain Services (AD DS)
