@@ -30,8 +30,8 @@ A public repo to share my journey on learning how to become a system administrat
 5. Plug in your USB onto the spare desktop, select USB boot option, and load up the installer
 6. We are going to select Windows Server 2022 Standard Evaluation (Desktop Experience) and install
 7. Once in, update everything! (I updated my BIOS as well)
-
-
+<br/>
+<br/>
 
 
 **Configuration Settings**
@@ -54,15 +54,18 @@ A public repo to share my journey on learning how to become a system administrat
   13. Set Forest Functional Level and Domain Functional Level to the highest level, e.g., Windows Server 2019.
   14. Set up the Directory Services Restore Mode password.
   15. Verify all other options and install to proceed and restart.
-
-
+<br/>
+<br/>
 
 
 **Remote Desktop Setup**
-  - Configuring Remote Desktop Access
-  - Security Considerations
+  - Of course we're going to want to use RDP to access our server from our other computer.
+
+#### Steps for Configuration:
 
 
+<br/>
+<br/>
 
 
 ## Topics Covered
