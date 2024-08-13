@@ -1,7 +1,6 @@
 ## Table of Contents
 
-- [Environment Setup](#environment-setup)
-- [Topics Covered](#topics-covered)
+  - [Environment Setup](#environment-setup)
   - [Active Directory](#active-directory)
   - [Group Policy](#group-policy)
   - [Networking](#networking)
@@ -23,13 +22,13 @@ A public repo to share my journey on learning how to become a system administrat
 
 #### Steps for Installation:
 
-1. Click Download ISO
-2. Enter your information
-3. Download 64-bit edition
-4. Download Rufus from: https://rufus.ie/en/ and create your Windows Server 2022 USB - This will be used to format and create a bootable USB flash drive
-5. Plug in your USB onto the spare desktop, select USB boot option, and load up the installer
-6. We are going to select Windows Server 2022 Standard Evaluation (Desktop Experience) and install
-7. Once in, update everything! (I updated my BIOS as well)
+  1. Click Download ISO
+  2. Enter your information
+  3. Download 64-bit edition
+  4. Download Rufus from: https://rufus.ie/en/ and create your Windows Server 2022 USB - This will be used to format and create a bootable USB flash drive
+  5. Plug in your USB onto the spare desktop, select USB boot option, and load up the installer
+  6. We are going to select Windows Server 2022 Standard Evaluation (Desktop Experience) and install
+  7. Once in, update everything! (I updated my BIOS as well)
 <br/>
 <br/>
 
@@ -62,17 +61,20 @@ A public repo to share my journey on learning how to become a system administrat
   - Of course we're going to want to use RDP to access our server from our other computer.
 
 #### Steps for Configuration:
-
-
+  1. Open Server Manager and click Local Server
+  2. Click "Disabled" where it says Remote Desktop
+  3. Under "Remote" tab, select "Allow remote connections to this computer" and "Allow connections only from..."
+  4. Hit Apply and ok
+  5. By default, the local Administrator account has access. Try to RDP in with Administrator.
 <br/>
 <br/>
 
 
-## Topics Covered
+## Active Directory Users and Computers
+  - Create a desktop shortcut by right clicking your desktop > New > shortcut > enter C:\Windows\System32\dsa.msc. You can also open ADUC by Server Manager Tools.
 
-### Active Directory
-- **Creating Users and Groups**
-  - Adding Users
+**Creating Users and Groups**
+  - Creating users was self explanatory ish. You would right click on an OU > New > Users and enter their information. To keep things uniform, I would enter the information normally, but the full name would be Mach, Riley and UPN and SAM would be something easy for me to remember since this is for practice.
   - Creating Security and Distribution Groups
 - **Organizational Units (OUs)**
   - Creating and Managing OUs
