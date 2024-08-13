@@ -70,15 +70,17 @@ A public repo to share my journey on learning how to become a system administrat
 <br/>
 
 
-## Active Directory Users and Computers
+## Organizational Units (OUs) and Active Directory Users and Computers (ADUC)
   - Create a desktop shortcut by right clicking your desktop > New > shortcut > enter C:\Windows\System32\dsa.msc. You can also open ADUC by Server Manager Tools.
 
+- **Organizational Units (OUs)**
+  - OUs allow for logical groups of objects such as users, computers, groups, etc.
+  - We'll first start off by clearing some default OUs. Right click and delete, goodbye. Next, right click our domain > new > Organizational Unit > name is Accounts > hit ok. If you want to delete the OU you've just created, right click > properties > Object > uncheck "Protect object from accidental deletion" > go back and right click your OU > delete.
+  -  
 **Creating Users and Groups**
   - Creating users was self explanatory ish. You would right click on an OU > New > Users and enter their information. To keep things uniform, I would enter the information normally, but the full name would be Mach, Riley and UPN and SAM would be something easy for me to remember since this is for practice.
   - Creating Security and Distribution Groups
-- **Organizational Units (OUs)**
-  - Creating and Managing OUs
-  - Delegating Permissions
+
 - **Domain Controllers**
   - Adding Additional Domain Controllers
   - Replication and Redundancy
