@@ -1,7 +1,7 @@
 ## Table of Contents
 
   - [Environment Setup](#environment-setup)
-  - [Active Directory](#active-directory)
+  - [Organizational Units (OUs) and Active Directory Users and Computers (ADUC)](#organizational-units-and-active-directory-users-and-computers)
   - [Group Policy](#group-policy)
   - [Networking](#networking)
   - [Security](#security)
@@ -33,6 +33,8 @@ A public repo to share my journey on learning how to become a system administrat
 <br/>
 
 
+
+
 **Configuration Settings**
   - We're going to assign a static IP address, update the computer name, install AD DS, setup a domain, and promote the server to a domain controller.
 
@@ -57,6 +59,8 @@ A public repo to share my journey on learning how to become a system administrat
 <br/>
 
 
+
+
 **Remote Desktop Setup**
   - Of course we're going to want to use RDP to access our server from our other computer.
 
@@ -70,7 +74,8 @@ A public repo to share my journey on learning how to become a system administrat
 <br/>
 
 
-## Organizational Units (OUs) and Active Directory Users and Computers (ADUC)
+
+## Organizational Units and Active Directory Users and Computers
   - Create a desktop shortcut by right clicking your desktop > New > shortcut > enter C:\Windows\System32\dsa.msc. You can also open ADUC by Server Manager Tools.
 
 - **Organizational Units (OUs)**
