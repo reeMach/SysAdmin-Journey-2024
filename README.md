@@ -12,11 +12,11 @@ This repository documents my hands-on learning experience as I work towards beco
 - TBA
 
 ## Table of Contents
-- [Environment Setup](Environment-Setup.md)
-- [Active Directory](ActiveDirectory.md)
-- [Group Policy](GroupPolicy.md)
-- [Networking](Networking.md)
-- [Security](Security.md)
+- [Environment Setup](Documentation/Environment-Setup.md)
+- [Active Directory](Documentation/ActiveDirectory.md)
+- [Group Policy](Documentation/GroupPolicy.md)
+- [Networking](Documentation/Networking.md)
+- [Security](Documentation/Security.md)
 
 ## How to Use This Repository
 This documentation is organized into separate sections, each focusing on a specific aspect of my experience with Windows Server and IT System Administration. Navigate through the links in the Table of Contents to explore each topic in detail.
