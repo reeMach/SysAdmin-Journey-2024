@@ -2,7 +2,7 @@
 
   - [Environment Setup](#environment-setup)
   - [Organizational Units (OUs) and Active Directory Users and Computers (ADUC)](#organizational-units-and-active-directory-users-and-computers)
-  - [Group Policy](#group-policy)
+  - [Group Policy Objects](#group-policy-objects)
   - [Networking](#networking)
   - [Security](#security)
 
@@ -33,8 +33,6 @@ A public repo to share my journey on learning how to become a system administrat
 <br/>
 
 
-
-
 **Configuration Settings**
   - We're going to assign a static IP address, update the computer name, install AD DS, setup a domain, and promote the server to a domain controller.
 
@@ -59,8 +57,6 @@ A public repo to share my journey on learning how to become a system administrat
 <br/>
 
 
-
-
 **Remote Desktop Setup**
   - Of course we're going to want to use RDP to access our server from our other computer.
 
@@ -75,10 +71,11 @@ A public repo to share my journey on learning how to become a system administrat
 
 
 
+
 ## Organizational Units and Active Directory Users and Computers
   - Create a desktop shortcut by right clicking your desktop > New > shortcut > enter C:\Windows\System32\dsa.msc. You can also open ADUC by Server Manager Tools.
 
-- **Organizational Units (OUs)**
+**Organizational Units (OUs)**
   - OUs allow for logical groups of objects such as users, computers, groups, etc. Before creating OUs, plan the structure based on organizational needs. Consider factors like geography, departments, and functions. While nesting OUs is possible, excessive nesting can complicate management and Group Policy application. Keep the structure as simple as possible. Maintain documentation of the OU structure, including the purpose of each OU and any associated GPOs or delegated permissions.
   - We'll first start off by clearing some default OUs. Right click and delete, goodbye. Next, right click our domain > new > Organizational Unit > name is Accounts > hit ok. If you want to delete the OU you've just created, right click > properties > Object > uncheck "Protect object from accidental deletion" > go back and right click your OU > delete.
  
@@ -104,15 +101,27 @@ A public repo to share my journey on learning how to become a system administrat
       - Use Cases: Creating an email distribution lists for departments or sending announcements to a specific group of users.
       - Purpose: Distribution groups are used primarily for email distribution lists. They are not used for security purposes and cannot be used to assign permissions to resources.
       - Function: Members of distribution groups receive emails sent to the group’s email address. They are typically used within email systems like Microsoft Exchange.
+<br/>
+<br/>
 
-- **Domain Controllers**
-  - Adding Additional Domain Controllers
-  - Replication and Redundancy
 
-### Group Policy
-- **Creating and Applying GPOs**
-  - Basic GPO Creation
-  - Linking and Filtering GPOs
+
+
+## Group Policy Objects
+- GPO is a collection of settings that can be applied to computers, users, or both within an Active Directory domain. These settings control various aspects of the working environment, such as security settings, software installation, desktop configuration, and more.
+**Creating and Applying ADUC Desktop Shortcut GPO Example**
+ 1. Open Server Manager > Tools > Group Policy Management
+ 2. We'll create GPOs in the Group Policy Objects directory. Forest: Domain > Domains > Local Domain > Group Policy Objects > Right click > New > Create a GPO and name it something descriptive about your new creation. We'll use Icon_ADUC_Policy
+ 3. Right click Icon_ADUC_Policy > Edit > Navigate to User Configuration > Preferences > Windows Settings > Shortcuts
+ 4. Right click on the right hand pane > New > Shortcut > Provide the following configurations:
+    - Name: Active Directory Users and Computers
+    - Target type: File System Object
+    - Location: Desktop
+    - Target path: %SystemRoot%\system32\dsa.msc
+ 5. Apply and hit ok
+ 6. Exit the editor and go back to Group Policy Management
+ 7. We're going to find an OU to apply/link this GPO. Right click Accounts or whichever OU we want to use this GPO on > Link an Existing GPO > Select Icon_ADUC_Policy
+ 8. Now whichever users are under this OU should have ADUC on their desktop
 - **Testing and Troubleshooting GPOs**
   - Using `gpupdate /force` and `gpresult`
   - Common Issues and Solutions
