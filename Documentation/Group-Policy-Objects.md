@@ -42,21 +42,13 @@
     - Store passwords using reversible encryption: Not Defined
       - May be non-compliant with some entities and can be easily decrypted due use of reversible encryption. If the encryption key is compromised, the decryption key is as well.
   4. On Group Policy Management > Right click an OU > Link an Existing GPO > Password Policy.
-    - You ran into a hiccup here. The next steps were to change another user's password and select "User must change password at next logon" but it wasn't selectable. The solution was to open the account properties and unselect "Password never expires". When you attempted to change the password again, the option was available.
+     - You ran into a hiccup here. The next steps were to change another user's password and select "User must change password at next logon" but it wasn't selectable. The solution was to open the account properties and unselect "Password never expires". When you attempted to change the password again, the option was available.
   5. Change a test user's password and try to logon and test your password policy.
-    - Another hiccup. Since we're using RDP to login to our accounts, RDP will allow us to enter our temporary password, but won't allow us in because "You must change your password before logging on the first time..." We can't lock the administrator account as well and just switch users due to RDP session limitation. Before we hack a solution for this, we'll login locally and reset our pass as to not detract from this learning topic.
-    - Next hiccup, we entered and reset our password, now we have receive a notification preventing us from logging in "The sign-in method you're trying to used isn't allowed..." When visiting local security policy to allow local log on (Run > secpol.msc > Local Policies > User Rights Assignment), the button to add group or users to the policy is greyed out. Instead we'll visit Server Manager > Tools > Group Policy Management > Edit an applicable GPO policy > Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > User Rights Assignment > Define and add groups. Link the GPO if it's not linked.
+     - Another hiccup. Since we're using RDP to login to our accounts, RDP will allow us to enter our temporary password, but won't allow us in because "You must change your password before logging on the first time..." We can't lock the administrator account as well and just switch users due to RDP session limitation. Before we hack a solution for this, we'll login locally and reset our pass as to not detract from this learning topic.
+     - Next hiccup, we entered and reset our password, now we have receive a notification preventing us from logging in "The sign-in method you're trying to used isn't allowed..." When visiting local security policy to allow local log on (Run > secpol.msc > Local Policies > User Rights Assignment), the button to add group or users to the policy is greyed out. Instead we'll visit Server Manager > Tools > Group Policy Management > Edit an applicable GPO policy > Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > User Rights Assignment > Define and add groups. Link the GPO if it's not linked.
       -  Next next hiccup. Still doesn't work and it may be because there's an existing GPO named "Default Domain Policy" that does not define "Allow local log on". After defining and adding the appropriate groups, nothing.
       - Alright after hours of searching and following what other users have tried online, this doesn't seem like an we can fix. Even Microsoft moderators don't seem to know a resolution for this and keep repeating "Add the user to Allow Local Log on". The issue seems to be only on Windows Server 2022 and the work around is the add the user to "Domain Admins" which we don't want to do, but will do to get back on track.
   6. Password was eligible and I was able to login.
-
-
-
-
-
-
-
-
 
 
 
