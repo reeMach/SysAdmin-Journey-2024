@@ -13,7 +13,7 @@ This repository documents my hands-on learning experience as I work towards beco
 
 ## Table of Contents
 - [Environment Setup](Documentation/Environment-Setup.md)
-- [Active Directory](Documentation/ActiveDirectory.md)
+- [Organizational Units and Active Directory Users and Computers](Documentation/Organizational-Units-and-Active-Directory-Users-and-Computers.md)
 - [Group Policy](Documentation/GroupPolicy.md)
 - [Networking](Documentation/Networking.md)
 - [Security](Documentation/Security.md)
