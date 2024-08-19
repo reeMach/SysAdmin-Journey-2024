@@ -16,7 +16,9 @@ This repository documents my hands-on learning experience as I work towards beco
 - [Organizational Units and Active Directory Users and Computers](Documentation/Organizational-Units-and-Active-Directory-Users-and-Computers.md)
 - [Group Policy Objects](Documentation/Group-Policy-Objects.md)
 - [Networking](Documentation/Networking.md)
+  - Go over PFSense, firewalls, Vlans, 802.1x, ports
 - [Security](Documentation/Security.md)
+  - Best practices 
 
 ## How to Use This Repository
 This documentation is organized into separate sections, each focusing on a specific aspect of my experience with Windows Server and IT System Administration. Navigate through the links in the Table of Contents to explore each topic in detail.
