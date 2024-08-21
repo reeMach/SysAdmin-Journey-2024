@@ -2,7 +2,7 @@
 
 ## Installation of Windows Server 2022
 
-**Overview**  
+### Overview
 This guide details the installation process of Windows Server 2022 on a spare desktop computer, specifically using a Dell OptiPlex 7070. The server was installed to save energy and utilized for learning purposes.
 
 ### Steps for Installation:
@@ -61,7 +61,7 @@ This guide details the installation process of Windows Server 2022 on a spare de
 
 ## Remote Desktop Setup
 
-**Overview**  
+### Overview
 This section outlines the process of setting up Remote Desktop Protocol (RDP) access to the server from another computer.
 
 ### Steps for Configuration:
