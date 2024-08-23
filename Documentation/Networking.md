@@ -9,7 +9,7 @@
     - Raspberry Pi
 
 
-##Configuring pfSense to preference
+## Configuring pfSense to preference
 - Because I'm typing this after configuring pfSense, some steps may be missed. Web interface > console. The console is actually not that bad, but the web interface is pretty well done.
 
 **Initial Setup**
