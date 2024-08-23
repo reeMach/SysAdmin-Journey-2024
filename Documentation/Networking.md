@@ -9,17 +9,36 @@
     - Raspberry Pi
 
 
-**Configuring pfSense to preference**
+##Configuring pfSense to preference
 - Because I'm typing this after configuring pfSense, some steps may be missed. Web interface > console. The console is actually not that bad, but the web interface is pretty well done.
-    1. Connect to your router (pfSense - 192.168.1.1) and login with the default credentials. Should be admin/pfsense.
-    2. Of course, change the default credentials!
-        - System > User Manager > Edit admin (pencil icon) > Enter new password > Save
-    3. DNS Server can be 1.1.1.1 or 8.8.8.8 - We'll setup piHole later though.
-    4. Setup DHCP, but setup a different Lan IP address instead of using the 192.168.0.1 schema
-        - Useable ranges:
-            - 10.0.0.0 to 10.255.255.255 (Class A range)
-            - 172.16.0.0 to 172.31.255.255 (Class B range)
-            - 192.168.0.0 to 192.168.255.255 (Class C range)
-        - Subnet Mask: 255.255.255.0
-        - CIDR Notation: /16 (65,536 addresses) or /24 (256 addresses)
-        - Restart devices or release the IP address on Windows devices via command prompt > ipconfig /release > ipconfig /renew
+
+**Initial Setup**
+1. Connect to your router (pfSense - 192.168.1.1) and login with the default credentials. Should be admin/pfsense.
+2. Of course, change the default credentials!
+    - System > User Manager > Edit admin (pencil icon) > Enter new password > Save
+3. DNS Server can be 1.1.1.1 or 8.8.8.8 - We'll setup piHole later though.
+4. Setup DHCP, but setup a different Lan IP address instead of using the 192.168.0.1 schema
+    - Useable ranges:
+        - 10.0.0.0 to 10.255.255.255 (Class A range)
+        - 172.16.0.0 to 172.31.255.255 (Class B range)
+        - 192.168.0.0 to 192.168.255.255 (Class C range)
+    - Subnet Mask: 255.255.255.0
+    - CIDR Notation: /16 (65,536 addresses) or /24 (256 addresses)
+    - Restart devices or release the IP address on Windows devices via command prompt > ipconfig /release > ipconfig /renew
+5. Open a browser > Visit IP address for pfSense > Login > Interface > Assignments
+    - Hope you know the physical MAC address of each ethernet port. If not, check your physical device to see if your ethernet ports are labeled.
+    - Assign WAN and LAN interface to the appropriate ethernet port and plug in the respective cable. Save.
+
+**DHCP Server**
+1. Services > DHCP Server > Enable DHCP server on LAN interface
+    - DHCP Backend: Kea DHCP (ISC DHCP EOL)
+    - Range: Leave like 10-20 addresses for static mapping later
+2. Save.
+
+**Port Forward**
+- Want to spin up that MC server?
+1. Firewall > NAT > Add
+    - Protocol: TCP (Defaulted to Any. For some reason when you switched this part to TCP, the option "Destination port range" didn't appear. Refresh and try again.)
+    - Destination Port Range - Custom: #####
+    - Redirect target IP: Address or Alias - Private IP of the device hosting the server
+    - Redirect target port: Other - ##### (Same as above)
