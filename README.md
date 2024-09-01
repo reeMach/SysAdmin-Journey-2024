@@ -26,7 +26,7 @@ This documentation is organized into separate sections, each focusing on a speci
 
 ## Technology Stack
 - **Operating System**: Windows Server 2022
-- **Tools**: Server Manager, Active Directory, Group Policy Management, DNS, DHCP
+- **Tools**: Server Manager, Active Directory, Group Policy Management, DNS, DHCP, PFsense, PowerShell
 
 ## Acknowledgments
 Special thanks to the online resources and communities that have provided guidance throughout this journey.
