@@ -17,6 +17,7 @@ This repository documents my hands-on learning experience as I work towards beco
 - [Group Policy Objects](Documentation/Group-Policy-Objects.md)
 - [Networking](Documentation/Networking.md)
   - Go over PFSense, firewalls, Vlans 802.1q, 802.1x Authentication, ports (May not go in too deep as to not detract too much into just networking)
+  - Cisco Switch?
 - [Security](Documentation/Security.md)
   - Best practices (May not go in too deep)
 - [Setting up Network Authentication LDAPS](Setting-up-Network-Authentication-LDAPS)
